@@ -131,7 +131,7 @@ export default function RootLayout({
       <Header openMenu={openMenu} openSearch={openSearch} />
       <Sidebar isSidebarOpen={isSidebarOpen} closeMenu={closeMenu} />
       <main className="lg:pl-64 pt-16"> 
-        <div className="p-4 sm:p-6 lg:p-8 max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto bg-gray-700">
           {children}
         </div>
       </main>

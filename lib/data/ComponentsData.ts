@@ -16,6 +16,10 @@ export const ComponentsData = [
         links: [{ name: "Grid System", path: "/docs/grid-system" }],
     },
     {
+        category: "Cards",
+        links: [{ name: "Stacked Cards", path: "/docs/stacked-cards" }],
+    },
+    {
         category: "Visualizations",
         links: [
             { name: "Bar Chart", path: "/docs/bar-chart" },
