@@ -7,6 +7,7 @@ import Header from "@/components/layout/Header";
 import Sidebar from "@/components/layout/Sidebar";
 import SearchModal from "@/components/layout/SearchModal";
 import { ComponentsData } from "@/lib/data/ComponentsData";
+import { Contribute } from "@/components/docs/contribute";
 
 interface SearchResultItem {
   name: string;
@@ -133,6 +134,7 @@ export default function RootLayout({
       <main className="lg:pl-64 pt-16"> 
         <div className="max-w-7xl mx-auto bg-gray-700">
           {children}
+          <Contribute />
         </div>
       </main>
       <SearchModal
