@@ -18,7 +18,7 @@ const Header: FC<HeaderProps> = ({ openMenu, openSearch }) => {
           <a href="/" className="flex items-center gap-3" aria-label="Homepage">
             <Image src="/logo.svg" alt="Logo" width={32} height={32} />
             <span className="hidden sm:inline-block font-semibold text-zinc-800 dark:text-white">
-              UI Components
+              UI Library
             </span>
           </a>
         </div>

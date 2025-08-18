@@ -10,8 +10,8 @@ const PanelStyles = () => (
 
     .kinetic-panel-aurora-border {
       position: relative;
-      overflow: hidden; /* Ensures the pseudo-element doesn't spill out */
-      border-radius: 24px; /* Matches the component's rounded-3xl */
+      overflow: hidden; 
+      border-radius: 24px;
     }
 
     .kinetic-panel-aurora-border::before {
@@ -21,16 +21,16 @@ const PanelStyles = () => (
       left: 0;
       right: 0;
       bottom: 0;
-      z-index: 0; /* Sits behind the content but above the background */
+      z-index: 0; 
 
       background: radial-gradient(
         350px circle at var(--mouse-x) var(--mouse-y),
-        rgba(148, 163, 184, 0.25), /* A soft, neutral light color */
+        rgba(148, 163, 184, 0.25), 
         transparent 80%
       );
       
       padding: 1px; 
-      border-radius: inherit; /* Inherit the parent's border-radius */
+      border-radius: inherit; 
       
       -webkit-mask: 
         linear-gradient(#fff 0 0) content-box, 
