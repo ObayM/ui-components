@@ -5,13 +5,13 @@ import { ComponentPreview } from './preview';
 
 import getFileCode from '@/lib/getFileCode';
 
-const previewCodeString = getFileCode('/app/docs/gradient-background/preview.tsx');
+const previewCodeString = getFileCode('/app/docs/text-scramble/preview.tsx');
 
 const installationCode = `  
-npm install three @react-three/fiber
+  No you don't need to install anything for this component :)
 `;
 
-const componentCode = getFileCode('/components/ui/gradient-background.tsx');
+const componentCode = getFileCode('/components/ui/text-scramble.tsx');
 
 export default function DocsPage() {
   const previewTabs = [
@@ -25,16 +25,17 @@ export default function DocsPage() {
     },
   ];
 
+
   return (
     <div className="bg-[#0b1120] text-gray-300 font-sans">
       <main className="max-w-5xl mx-auto px-4 py-16 sm:py-24">
         
         <section className="text-center mb-24">
           <h1 className="text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-400">
-            Gradient Moving Background
+            Text Scramble Animation
           </h1>
           <p className="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-gray-400">
-            A dynamic 3D background that blends two colors together with a smooth gradient effect.
+            Create engaging text animations with a scramble effect that reveals the text on hover.
           </p>
         </section>
 
@@ -52,7 +53,7 @@ export default function DocsPage() {
           <p className="mt-8 text-gray-400 mb-4">
             Then, copy the following component code into your project:
           </p>
-          <CodeBlock code={componentCode} fileName="components/ui/gradient-background.tsx" />
+          <CodeBlock code={componentCode} fileName="components/ui/text-scramble.tsx" />
         </section>
         
       </main>

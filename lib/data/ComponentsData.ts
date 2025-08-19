@@ -6,6 +6,16 @@ export const ComponentsData = [
         ],
     },
     {
+        category: "Text Animations",
+        links: [
+            { name: "Typewriter", path: "/docs/type-writer" },
+            { name: "Text Reveal", path: "/docs/text-reveal" },
+            { name: "Text Scramble", path: "/docs/text-scramble" },
+            { name: "Text Shadow", path: "/docs/text-shadow" }
+        ]
+    },
+
+    {
         category: "Cards",
         links: [
             { name: "Stacked Cards", path: "/docs/stacked-cards" },
@@ -16,7 +26,6 @@ export const ComponentsData = [
         category: "Layout",
         links: [
             { name: "Gradient Background", path: "/docs/gradient-background" },
-            { name: "Type Writer", path: "/docs/type-writer" },
         ],
     },
     
