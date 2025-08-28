@@ -19,7 +19,8 @@ export const ComponentsData = [
         category: "Cards",
         links: [
             { name: "Stacked Cards", path: "/docs/stacked-cards" },
-            { name: "Glass Panel", path: "/docs/glass-panel" }
+            { name: "Glass Panel", path: "/docs/glass-panel" },
+            { name: "Accordion", path: "/docs/accordion" },
         ],
     },
     {

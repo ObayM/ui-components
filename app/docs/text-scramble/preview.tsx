@@ -3,7 +3,7 @@ import TextScramble from '@/components/ui/text-scramble';
 
 const ComponentPreview: React.FC = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-slate-900 to-slate-700">
+    <div className="flex h-9/12 items-center justify-center bg-gradient-to-br from-slate-900 to-slate-700">
       <div className="grid grid-cols-1 gap-8 text-center">
         <h1 className="mb-8 text-4xl font-bold text-white">
            Text Scramble

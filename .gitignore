@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# this is just for ideas and brainstorming so I prefer to keep it private
+ideas.md 
