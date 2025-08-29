@@ -2,8 +2,8 @@
 
 import { useState } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import { FiCopy, FiCheck } from 'react-icons/fi';
+import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { Clipboard, ClipboardCheck } from 'lucide-react';
 
 interface CodeBlockProps {
   code: string;
@@ -22,53 +22,65 @@ export const CodeBlock = ({
     try {
       await navigator.clipboard.writeText(code);
       setIsCopied(true);
-      setTimeout(() => setIsCopied(false), 2000);
+      setTimeout(() => setIsCopied(false), 2500);
     } catch (err) {
       console.error('Failed to copy code: ', err);
     }
   };
 
   return (
-    <div className="relative my-4 rounded-xl shadow-lg bg-[#1E1E1E]">
+    <div className="relative my-6 rounded-2xl shadow-lg group">
+      <div
+        className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg border border-white/10"
+        aria-hidden="true"
+      />
 
-      <div className="flex items-center justify-between px-4 py-2 bg-gray-700/50 rounded-t-xl">
-        <span className="text-xs text-gray-400 font-mono">
+      <div className="relative z-10 flex items-center justify-between px-4 py-2 bg-gradient-to-br from-white/5 to-transparent rounded-t-2xl border-b border-white/10">
+        <span className="text-xs text-gray-400 font-mono select-none">
           {fileName || language}
         </span>
 
         <button
           onClick={handleCopy}
-          className={`flex items-center gap-2 text-sm text-gray-300 transition-colors duration-200 hover:text-white ${
-            isCopied ? 'text-green-400' : ''
+          className={`flex items-center gap-2 text-sm transition-colors duration-200 ${
+            isCopied
+              ? 'text-green-400'
+              : 'text-gray-300 hover:text-white'
           }`}
           aria-label={isCopied ? 'Copied!' : 'Copy code to clipboard'}
         >
-          {isCopied ? <FiCheck size={16} /> : <FiCopy size={16} />}
+          {isCopied ? (
+            <ClipboardCheck size={16} />
+          ) : (
+            <Clipboard size={16} />
+          )}
           {isCopied ? 'Copied!' : 'Copy'}
         </button>
       </div>
 
-      <SyntaxHighlighter
-        language={language}
-        style={vscDarkPlus}
-        showLineNumbers
-        wrapLines={true}
-        customStyle={{
-          margin: 0,
-          padding: '1.5rem',
-          backgroundColor: 'transparent',
-          borderBottomLeftRadius: '0.75rem',
-          borderBottomRightRadius: '0.75rem',
-        }}
-        codeTagProps={{
-          style: {
-            fontFamily: '"Fira Code", "Courier New", monospace',
+      <div className="relative z-10">
+        <SyntaxHighlighter
+          language={language}
+          style={atomDark}
+          showLineNumbers
+          wrapLines={true}
+          customStyle={{
+            margin: 0,
+            padding: '1.5rem',
+            backgroundColor: 'transparent',
+            borderBottomLeftRadius: '1rem',
+            borderBottomRightRadius: '1rem',
             fontSize: '0.9rem',
-          },
-        }}
-      >
-        {code.trim()}
-      </SyntaxHighlighter>
+          }}
+          codeTagProps={{
+            style: {
+              fontFamily: '"Fira Code", "Courier New", monospace',
+            },
+          }}
+        >
+          {code.trim()}
+        </SyntaxHighlighter>
+      </div>
     </div>
   );
 };
