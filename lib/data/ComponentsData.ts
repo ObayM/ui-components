@@ -9,9 +9,7 @@ export const ComponentsData = [
         category: "Text Animations",
         links: [
             { name: "Typewriter", path: "/docs/type-writer" },
-            { name: "Text Reveal", path: "/docs/text-reveal" },
             { name: "Text Scramble", path: "/docs/text-scramble" },
-            { name: "Text Shadow", path: "/docs/text-shadow" }
         ]
     },
 
